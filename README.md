@@ -2,7 +2,7 @@
 
 ## Comandos Disponíveis
 
-Use os seguintes comandos no terminal para compilar, executar ou limpar os arquivos do projeto:
+Use os seguintes comandos no terminal para compilar, executar ou limpar os ficheiros do projeto:
 
 | Comando        | Descrição                                            |
 | -------------- | ---------------------------------------------------- |
