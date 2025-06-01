@@ -1,6 +1,11 @@
 # Projeto EDA - Segunda Fase
 
-Comandos:
-make - cria executável
-./eda_fase_2 - para executar
-make clean - remove ficheiros
+## Comandos Disponíveis
+
+Use os seguintes comandos no terminal para compilar, executar ou limpar os arquivos do projeto:
+
+| Comando        | Descrição                                            |
+| -------------- | ---------------------------------------------------- |
+| `make`         | Compila o projeto e cria o executável (`eda_fase_2`) |
+| `./eda_fase_2` | Executa o programa                                   |
+| `make clean`   | Remove arquivos objeto e executável gerados          |
