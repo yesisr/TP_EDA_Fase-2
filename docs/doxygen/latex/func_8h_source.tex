@@ -1,0 +1,50 @@
+\doxysection{func.\+h}
+\hypertarget{func_8h_source}{}\label{func_8h_source}\index{include/func.h@{include/func.h}}
+\mbox{\hyperlink{func_8h}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ FUNC\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ FUNC\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}estruturas.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \mbox{\hyperlink{struct_grafo}{Grafo}}\ *\mbox{\hyperlink{func_8h_af5cf618621b693d94215a263da3ba5ff}{criarGrafo}}();}
+\DoxyCodeLine{00016\ \mbox{\hyperlink{struct_antena}{Antena}}\ *\mbox{\hyperlink{func_8h_a3171304a931b5928f13a133d127dd2f6}{criarVertice}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *grafo,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{char}\ freq);}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_a1d7c3165c2b4b0e7d3c7a55bfd8e8122}{criarAresta}}(\mbox{\hyperlink{struct_antena}{Antena}}\ *origem,\ \mbox{\hyperlink{struct_antena}{Antena}}\ *destino);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \mbox{\hyperlink{struct_grafo}{Grafo}}\ *\mbox{\hyperlink{func_8h_afab4ca45113000241a5a0b41a2baf135}{carregarAntenas}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *ficheiro);}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_a06fab3780d9fe80f2c09ec893fd5304a}{inserirArestas}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *grafo);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \mbox{\hyperlink{struct_antena}{Antena}}\ *\mbox{\hyperlink{func_8h_a87e67b1b94c7f841255ed3db42fbbe08}{procurarAntenaId}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *grafo,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \mbox{\hyperlink{structdfslista}{dfslista}}\ *\mbox{\hyperlink{func_8h_aeca7edf7cb33c72e3f1ab8ca020f8322}{dfs}}(\mbox{\hyperlink{struct_antena}{Antena}}\ *atual,\ \mbox{\hyperlink{structdfslista}{dfslista}}\ *lista);}
+\DoxyCodeLine{00025\ \mbox{\hyperlink{structdfslista}{dfslista}}\ *\mbox{\hyperlink{func_8h_a4dac090c5e5c58e32736beefe830b519}{execDfs}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *grafo,\ \textcolor{keywordtype}{int}\ id\_inicio);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_ab3eaf7a5e05eeece6d0f3cc5a04b2cd4}{inicializarFila}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_a1ac8b0a348e93616170763291da890d6}{enfileirar}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f,\ \mbox{\hyperlink{struct_antena}{Antena}}\ *a);}
+\DoxyCodeLine{00029\ \mbox{\hyperlink{struct_antena}{Antena}}\ *\mbox{\hyperlink{func_8h_a5a65043d4728bccaddd601defc047a95}{desenfileirar}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_ade7b9a12324f4d1425f2bb626d67b45f}{filaVazia}}(\mbox{\hyperlink{struct_fila}{Fila}}\ *f);}
+\DoxyCodeLine{00031\ \mbox{\hyperlink{structbfslista}{bfslista}}\ *\mbox{\hyperlink{func_8h_a9831908c5aced85e41cfd09f538c50a7}{execBfs}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *grafo,\ \textcolor{keywordtype}{int}\ id\_inicio);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_a8d2f3b4c037e77fcdeeabb218a65cfa4}{adicionarAoCamino}}(\mbox{\hyperlink{struct_caminho}{Caminho}}\ *c,\ \textcolor{keywordtype}{int}\ id\_antena);}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_a78ed52f64438b0c11886e6d03f6d02e3}{removerDoCaminho}}(\mbox{\hyperlink{struct_caminho}{Caminho}}\ *c);}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_affe2c24d6e71d09ed33ff424960d8a8c}{dfsBacktracking}}(\mbox{\hyperlink{struct_antena}{Antena}}\ *atual,\ \mbox{\hyperlink{struct_antena}{Antena}}\ *destino,\ \mbox{\hyperlink{struct_caminho}{Caminho}}\ *caminho);}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_ae022e6ecdc705a0dfec30f6e3781a00c}{encontrarCaminhoDFS}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *grafo,\ \textcolor{keywordtype}{int}\ id\_origem,\ \textcolor{keywordtype}{int}\ id\_destino,\ \mbox{\hyperlink{struct_caminho}{Caminho}}\ *caminho);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_a28d12156f3d13a3339d9e6066fc0b866}{segmentosSeCruzam}}(\textcolor{keywordtype}{int}\ x1,\ \textcolor{keywordtype}{int}\ y1,\ \textcolor{keywordtype}{int}\ x2,\ \textcolor{keywordtype}{int}\ y2,\ \textcolor{keywordtype}{int}\ x3,\ \textcolor{keywordtype}{int}\ y3,\ \textcolor{keywordtype}{int}\ x4,\ \textcolor{keywordtype}{int}\ y4);}
+\DoxyCodeLine{00039\ \mbox{\hyperlink{structinterlista}{interlista}}\ *\mbox{\hyperlink{func_8h_ae524736eaa80d9a4afde36cf810118fc}{detetarIntersecoes}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *grafo);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_aa552546be5db6e0f0ca3f66e7b939809}{escreverBloco}}(\textcolor{keywordtype}{char}\ *tag,\ FILE\ *f);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_afeb3d33e33f650a92f0f28bf83b17514}{escreverAntenas}}(\mbox{\hyperlink{struct_grafo}{Grafo}}\ *grafo,\ FILE\ *f);}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_a5dcec61dfec0494a42a8c6b46cca7be2}{escreverDFS}}(\mbox{\hyperlink{structdfslista}{dfslista}}\ *\mbox{\hyperlink{func_8c_aeca7edf7cb33c72e3f1ab8ca020f8322}{dfs}},\ FILE\ *f);}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_aedd35d53fa2884e1d8cfda43174caf62}{escreverBFS}}(\mbox{\hyperlink{structbfslista}{bfslista}}\ *bfs,\ FILE\ *f);}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_a5b0cd757e77fca58262d007437bc9295}{escreverCaminho}}(\mbox{\hyperlink{struct_caminho}{Caminho}}\ *caminho,\ FILE\ *f);}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_a4773000c89be91dfd6caa662833abdde}{escreverIntersecoes}}(\mbox{\hyperlink{structinterlista}{interlista}}\ *lista,\ FILE\ *f);}
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_a3d1f28c5d7b5323840fa8923bc3fc008}{lerFicheiroEscreverOutput}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *nome\_ficheiro);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{func_8h_a29463bd2db52cabfe2390f0f64a14115}{freeMem}}(\mbox{\hyperlink{structdfslista}{dfslista}}\ *\mbox{\hyperlink{func_8c_aeca7edf7cb33c72e3f1ab8ca020f8322}{dfs}},\ \mbox{\hyperlink{structbfslista}{bfslista}}\ *bfs,\ \mbox{\hyperlink{structinterlista}{interlista}}\ *ints);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,229 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+
+\lstset{
+  inputencoding=utf8,
+  extendedchars=true,
+  literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+           {â}{{\^a}}1 {ê}{{\^e}}1 {ô}{{\^o}}1
+           {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+           {ã}{{\~a}}1 {õ}{{\~o}}1 {Ã}{{\~A}}1 {Õ}{{\~O}}1
+           {ç}{{\c{c}}}1 {Ç}{{\c{C}}}1
+           {à}{{\`a}}1 {À}{{\`A}}1,
+  language=C,
+  captionpos=b,
+  tabsize=4,
+  showspaces=false,
+  showstringspaces=false,
+  basicstyle=\ttfamily\small,
+  commentstyle=\color{gray}\ttfamily\itshape
+}
+
+\title{Relatório do Projeto de EDA - Segunda Fase: \\ Implementação de Grafos para Simulação de Antenas}
+\author{Bruno Paiva \\ a31496@alunos.ipca.pt \\ \\ IPCA - Licenciatura de Sistemas Informáticos}
+\date{Maio 2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Este relatório descreve o desenvolvimento da segunda fase do projeto da unidade curricular de Estruturas de Dados Avançadas, que consistiu na implementação de um sistema de simulação de efeitos de antenas utilizando grafos em linguagem C. 
+\\O trabalho aborda a modelação do problema, a estrutura de dados desenvolvida, as funcionalidades implementadas e os resultados obtidos. 
+\\A solução proposta permite carregar dados de antenas a partir de ficheiros, construir grafos de conexões entre antenas, realizar pesquisas em profundidade e largura, identificar caminhos entre antenas e detetar interseções entre conexões. 
+\\O projeto demonstra a aplicação prática de conceitos fundamentais de grafos e boas práticas de desenvolvimento de software.
+\end{abstract}
+
+\tableofcontents
+
+\chapter{Introdução}
+\section{Motivação}
+O presente trabalho surge como continuação da primeira fase do projeto da unidade curricular de Estruturas de Dados Avançadas. Enquanto a primeira fase utilizou listas ligadas para resolver o problema proposto, esta segunda fase explora estruturas de grafos, consolidando conhecimentos mais avançados de teoria dos grafos e sua implementação em C.
+
+\section{Objetivos}
+Os principais objetivos desta fase foram:
+\begin{itemize}
+\item Desenvolver uma estrutura de dados em grafo para representar antenas e suas conexões
+\item Implementar algoritmos de pesquisa em grafos (DFS e BFS)
+\item Identificar caminhos entre pares de antenas
+\item Detetar interseções entre conexões de antenas
+\item Armazenar resultados em ficheiros binários
+\item Documentar o código seguindo boas práticas
+\end{itemize}
+
+\newpage 
+
+\section{Metodologia}
+A metodologia adotada seguiu as seguintes etapas:
+\begin{enumerate}
+\item Análise do problema e requisitos
+\item Desenho da estrutura de dados em grafo
+\item Implementação incremental das funcionalidades
+\item Testes unitários e integração
+\item Documentação do código
+\item Redação do relatório técnico
+\end{enumerate}
+
+\section{Estrutura do Documento}
+O presente documento está organizado da seguinte forma: o Capítulo 2 descreve o problema em detalhe; o Capítulo 3 apresenta a solução implementada; o Capítulo 4 mostra exemplos de funcionamento; e finalmente o Capítulo 5 sumariza as conclusões e trabalhos futuros.
+
+\chapter{Descrição do Problema}
+O problema consiste em simular o comportamento de múltiplas antenas de transmissão representadas num grafo, onde:
+\begin{itemize}
+\item Cada vértice representa uma antena com posição (x,y) e frequência
+\item As arestas conectam antenas com a mesma frequência
+\end{itemize}
+
+\section{Requisitos Funcionais}
+\begin{itemize}
+\item Ler configurações de antenas a partir de ficheiro texto
+\item Construir grafo de conexões entre antenas
+\item Implementar pesquisa em profundidade (DFS)
+\item Implementar pesquisa em largura (BFS)
+\item Identificar todos os caminhos entre duas antenas
+\item Detetar interseções entre conexões
+\item Armazenar resultados em ficheiro binário
+\end{itemize}
+
+\newpage
+
+\section{Requisitos Não Funcionais}
+\begin{itemize}
+\item Implementação em linguagem C
+\item Uso obrigatório de estruturas de grafos e listas dinámicas
+\item Modularização do código
+\item Documentação com Doxygen
+\item Validação de entrada de dados
+\end{itemize}
+
+\chapter{Solução Implementada}
+\section{Estrutura de Dados}
+A estrutura de dados principal foi implementada como um grafo não direcionado, conforme o seguinte código:
+
+\subsection{Representação de Antenas}
+Cada antena é modelada como um vértice contendo:
+\begin{itemize}
+\item Identificador único
+\item Coordenadas espaciais
+\item Frequência de operação
+\item Estado de visitação
+\item Lista de arestas adjacentes
+\end{itemize}
+
+\subsection{Representação de Arestas}
+As ligações entre antenas são representadas por:
+\begin{itemize}
+\item Referência para a antena de destino
+\item Ponteiro para a próxima aresta
+\end{itemize}
+
+\subsection{Estrutura do Grafo}
+O grafo principal contém:
+\begin{itemize}
+\item Contador do número total de vértices
+\item Ponteiro para a lista de vértices
+\end{itemize}
+
+\newpage
+
+\section{Arquitetura do Sistema}
+O sistema foi organizado nos seguintes módulos principais:
+\begin{itemize}
+\item \textbf{main.c}: Contém a lógica principal do programa
+\item \textbf{estruturas.h}: Define as estruturas de dados
+\item \textbf{func.h}: Declaração das funções
+\item \textbf{func.c}: Implementação das funções
+\item \textbf{libfunc.a}: Biblioteca das funções
+\item \textbf{antenas.txt}: Ficheiro de entrada com a matriz de antenas
+\item \textbf{output.bin}: Ficheiro binário de saída
+\item \textbf{makefile}: Ficheiro para compilar e criar o executável
+\end{itemize}
+
+\newpage
+
+\section{Principais Algoritmos}
+\subsection{Construção do Grafo}
+O algoritmo de construção do grafo segue os seguintes passos:
+\begin{enumerate}
+\item Ler o ficheiro de entrada e contar o número de antenas
+\item Alocar memória para o grafo
+\item Inserir as antenas nos vértices do grafo
+\item Criar arestas entre antenas com a mesma frequência
+\end{enumerate}
+
+\subsection{Pesquisa em Profundidade (DFS)}
+Implementação recursiva da DFS que visita todos os vértices alcançáveis a partir de um vértice inicial, registando as arestas percorridas no ficheiro binário.
+
+\subsection{Pesquisa em Largura (BFS)}
+Implementação iterativa da BFS usando uma fila, que visita os vértices por níveis de distância do vértice inicial.
+
+\subsection{Identificação de Caminhos}
+Algoritmo recursivo que encontra todos os caminhos possíveis entre dois vértices, armazenando cada caminho encontrado no ficheiro binário.
+
+\subsection{Detecção de Interseções}
+Algoritmo que verifica se segmentos de reta entre pares de antenas se intersectam, utilizando cálculos de geometria.
+
+\chapter{Exemplos de Funcionamento}
+Para o seguinte mapa de entrada (antenas.txt):
+\begin{verbatim}
+......
+.A..B.
+......
+.B..A.
+......
+......
+
+\end{verbatim}
+
+O programa produz a seguinte saída da leitura do ficheiro binário:
+\begin{verbatim}
+=== ANTENAS (4) ===
+Antena ID 3: (4, 3) - A
+Antena ID 2: (1, 3) - B
+Antena ID 1: (4, 1) - B
+Antena ID 0: (1, 1) - A
+=== DFS ===
+Antena DFS: (1, 3) - B
+Antena DFS: (4, 1) - B
+=== BFS ===
+Antena BFS: (4, 3) - A
+Antena BFS: (1, 1) - A
+=== CAMINHO ===
+Antena no caminho: ID 3
+Antena no caminho: ID 0
+=== INTERSEÇÕES ===
+Interseção: (1,1)-(4,3) com (4,1)-(1,3), freq: A
+Interseção: (4,1)-(1,3) com (1,1)-(4,3), freq: B
+\end{verbatim}
+
+\chapter{Conclusões e Trabalho Futuro}
+Através deste projeto foi possível consolidar conhecimentos fundamentais sobre estruturas de grafos e sua implementação em C. Os principais conhecimentos desenvolvidos foram:
+\begin{itemize}
+\item Domínio da manipulação de grafos em C
+\item Implementação de algoritmos de pesquisa em grafos
+\item Técnicas de armazenamento em ficheiros binários
+\item Importância da modularização e documentação de código
+\end{itemize}
+
+Como trabalho futuro, sugere-se:
+\begin{itemize}
+\item Implementação de algoritmos mais eficientes para detecção de interseções
+\item Visualização gráfica do grafo e dos caminhos encontrados
+\end{itemize}
+
+\chapter{Repositório e Documentação}
+Todo o código está disponível no repositório GitHub: \url{https://github.com/yesisr/TP_EDA_Fase-2}
+
+A documentação do código foi gerada com Doxygen e está incluída no repositório na pasta docs/doxygen.
+
+\end{document}

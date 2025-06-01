@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto - EDA Fase 2: Código-Fonte de include/func.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projeto - EDA Fase 2
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('func_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">func.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="func_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef FUNC_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define FUNC_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;estruturas.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><a class="code hl_struct" href="struct_grafo.html">Grafo</a> *<a class="code hl_function" href="func_8h.html#af5cf618621b693d94215a263da3ba5ff">criarGrafo</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><a class="code hl_struct" href="struct_antena.html">Antena</a> *<a class="code hl_function" href="func_8h.html#a3171304a931b5928f13a133d127dd2f6">criarVertice</a>(<a class="code hl_struct" href="struct_grafo.html">Grafo</a> *grafo, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">char</span> freq);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#a1d7c3165c2b4b0e7d3c7a55bfd8e8122">criarAresta</a>(<a class="code hl_struct" href="struct_antena.html">Antena</a> *origem, <a class="code hl_struct" href="struct_antena.html">Antena</a> *destino);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><a class="code hl_struct" href="struct_grafo.html">Grafo</a> *<a class="code hl_function" href="func_8h.html#afab4ca45113000241a5a0b41a2baf135">carregarAntenas</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ficheiro);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#a06fab3780d9fe80f2c09ec893fd5304a">inserirArestas</a>(<a class="code hl_struct" href="struct_grafo.html">Grafo</a> *grafo);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><a class="code hl_struct" href="struct_antena.html">Antena</a> *<a class="code hl_function" href="func_8h.html#a87e67b1b94c7f841255ed3db42fbbe08">procurarAntenaId</a>(<a class="code hl_struct" href="struct_grafo.html">Grafo</a> *grafo, <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><a class="code hl_struct" href="structdfslista.html">dfslista</a> *<a class="code hl_function" href="func_8h.html#aeca7edf7cb33c72e3f1ab8ca020f8322">dfs</a>(<a class="code hl_struct" href="struct_antena.html">Antena</a> *atual, <a class="code hl_struct" href="structdfslista.html">dfslista</a> *lista);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><a class="code hl_struct" href="structdfslista.html">dfslista</a> *<a class="code hl_function" href="func_8h.html#a4dac090c5e5c58e32736beefe830b519">execDfs</a>(<a class="code hl_struct" href="struct_grafo.html">Grafo</a> *grafo, <span class="keywordtype">int</span> id_inicio);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#ab3eaf7a5e05eeece6d0f3cc5a04b2cd4">inicializarFila</a>(<a class="code hl_struct" href="struct_fila.html">Fila</a> *f);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#a1ac8b0a348e93616170763291da890d6">enfileirar</a>(<a class="code hl_struct" href="struct_fila.html">Fila</a> *f, <a class="code hl_struct" href="struct_antena.html">Antena</a> *a);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><a class="code hl_struct" href="struct_antena.html">Antena</a> *<a class="code hl_function" href="func_8h.html#a5a65043d4728bccaddd601defc047a95">desenfileirar</a>(<a class="code hl_struct" href="struct_fila.html">Fila</a> *f);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#ade7b9a12324f4d1425f2bb626d67b45f">filaVazia</a>(<a class="code hl_struct" href="struct_fila.html">Fila</a> *f);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><a class="code hl_struct" href="structbfslista.html">bfslista</a> *<a class="code hl_function" href="func_8h.html#a9831908c5aced85e41cfd09f538c50a7">execBfs</a>(<a class="code hl_struct" href="struct_grafo.html">Grafo</a> *grafo, <span class="keywordtype">int</span> id_inicio);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#a8d2f3b4c037e77fcdeeabb218a65cfa4">adicionarAoCamino</a>(<a class="code hl_struct" href="struct_caminho.html">Caminho</a> *c, <span class="keywordtype">int</span> id_antena);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#a78ed52f64438b0c11886e6d03f6d02e3">removerDoCaminho</a>(<a class="code hl_struct" href="struct_caminho.html">Caminho</a> *c);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#affe2c24d6e71d09ed33ff424960d8a8c">dfsBacktracking</a>(<a class="code hl_struct" href="struct_antena.html">Antena</a> *atual, <a class="code hl_struct" href="struct_antena.html">Antena</a> *destino, <a class="code hl_struct" href="struct_caminho.html">Caminho</a> *caminho);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#ae022e6ecdc705a0dfec30f6e3781a00c">encontrarCaminhoDFS</a>(<a class="code hl_struct" href="struct_grafo.html">Grafo</a> *grafo, <span class="keywordtype">int</span> id_origem, <span class="keywordtype">int</span> id_destino, <a class="code hl_struct" href="struct_caminho.html">Caminho</a> *caminho);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#a28d12156f3d13a3339d9e6066fc0b866">segmentosSeCruzam</a>(<span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> x2, <span class="keywordtype">int</span> y2, <span class="keywordtype">int</span> x3, <span class="keywordtype">int</span> y3, <span class="keywordtype">int</span> x4, <span class="keywordtype">int</span> y4);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><a class="code hl_struct" href="structinterlista.html">interlista</a> *<a class="code hl_function" href="func_8h.html#ae524736eaa80d9a4afde36cf810118fc">detetarIntersecoes</a>(<a class="code hl_struct" href="struct_grafo.html">Grafo</a> *grafo);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#aa552546be5db6e0f0ca3f66e7b939809">escreverBloco</a>(<span class="keywordtype">char</span> *tag, FILE *f);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#afeb3d33e33f650a92f0f28bf83b17514">escreverAntenas</a>(<a class="code hl_struct" href="struct_grafo.html">Grafo</a> *grafo, FILE *f);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#a5dcec61dfec0494a42a8c6b46cca7be2">escreverDFS</a>(<a class="code hl_struct" href="structdfslista.html">dfslista</a> *<a class="code hl_function" href="func_8c.html#aeca7edf7cb33c72e3f1ab8ca020f8322">dfs</a>, FILE *f);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#aedd35d53fa2884e1d8cfda43174caf62">escreverBFS</a>(<a class="code hl_struct" href="structbfslista.html">bfslista</a> *bfs, FILE *f);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#a5b0cd757e77fca58262d007437bc9295">escreverCaminho</a>(<a class="code hl_struct" href="struct_caminho.html">Caminho</a> *caminho, FILE *f);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#a4773000c89be91dfd6caa662833abdde">escreverIntersecoes</a>(<a class="code hl_struct" href="structinterlista.html">interlista</a> *lista, FILE *f);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#a3d1f28c5d7b5323840fa8923bc3fc008">lerFicheiroEscreverOutput</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *nome_ficheiro);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">int</span> <a class="code hl_function" href="func_8h.html#a29463bd2db52cabfe2390f0f64a14115">freeMem</a>(<a class="code hl_struct" href="structdfslista.html">dfslista</a> *<a class="code hl_function" href="func_8c.html#aeca7edf7cb33c72e3f1ab8ca020f8322">dfs</a>, <a class="code hl_struct" href="structbfslista.html">bfslista</a> *bfs, <a class="code hl_struct" href="structinterlista.html">interlista</a> *ints);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="afunc_8c_html_aeca7edf7cb33c72e3f1ab8ca020f8322"><div class="ttname"><a href="func_8c.html#aeca7edf7cb33c72e3f1ab8ca020f8322">dfs</a></div><div class="ttdeci">dfslista * dfs(Antena *atual, dfslista *lista)</div><div class="ttdoc">Função para fazer pesquisa em profundidade (DFS)</div><div class="ttdef"><b>Definição</b> func.c:185</div></div>
+<div class="ttc" id="afunc_8h_html_a06fab3780d9fe80f2c09ec893fd5304a"><div class="ttname"><a href="func_8h.html#a06fab3780d9fe80f2c09ec893fd5304a">inserirArestas</a></div><div class="ttdeci">int inserirArestas(Grafo *grafo)</div><div class="ttdoc">Função para criar uma aresta de 2 antenas com a mesma função.</div><div class="ttdef"><b>Definição</b> func.c:131</div></div>
+<div class="ttc" id="afunc_8h_html_a1ac8b0a348e93616170763291da890d6"><div class="ttname"><a href="func_8h.html#a1ac8b0a348e93616170763291da890d6">enfileirar</a></div><div class="ttdeci">int enfileirar(Fila *f, Antena *a)</div><div class="ttdoc">Função que insere uma antena no final da fila.</div><div class="ttdef"><b>Definição</b> func.c:251</div></div>
+<div class="ttc" id="afunc_8h_html_a1d7c3165c2b4b0e7d3c7a55bfd8e8122"><div class="ttname"><a href="func_8h.html#a1d7c3165c2b4b0e7d3c7a55bfd8e8122">criarAresta</a></div><div class="ttdeci">int criarAresta(Antena *origem, Antena *destino)</div><div class="ttdoc">Função para criar uma aresta para ligar duas antenas.</div><div class="ttdef"><b>Definição</b> func.c:67</div></div>
+<div class="ttc" id="afunc_8h_html_a28d12156f3d13a3339d9e6066fc0b866"><div class="ttname"><a href="func_8h.html#a28d12156f3d13a3339d9e6066fc0b866">segmentosSeCruzam</a></div><div class="ttdeci">int segmentosSeCruzam(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4)</div><div class="ttdoc">Função para verificar se 2 segmentos se cruzam.</div><div class="ttdef"><b>Definição</b> func.c:483</div></div>
+<div class="ttc" id="afunc_8h_html_a29463bd2db52cabfe2390f0f64a14115"><div class="ttname"><a href="func_8h.html#a29463bd2db52cabfe2390f0f64a14115">freeMem</a></div><div class="ttdeci">int freeMem(dfslista *dfs, bfslista *bfs, interlista *ints)</div><div class="ttdoc">Função para libertar memória.</div><div class="ttdef"><b>Definição</b> func.c:849</div></div>
+<div class="ttc" id="afunc_8h_html_a3171304a931b5928f13a133d127dd2f6"><div class="ttname"><a href="func_8h.html#a3171304a931b5928f13a133d127dd2f6">criarVertice</a></div><div class="ttdeci">Antena * criarVertice(Grafo *grafo, int x, int y, char freq)</div><div class="ttdoc">Função para criar uma antena/vértice no grafo.</div><div class="ttdef"><b>Definição</b> func.c:43</div></div>
+<div class="ttc" id="afunc_8h_html_a3d1f28c5d7b5323840fa8923bc3fc008"><div class="ttname"><a href="func_8h.html#a3d1f28c5d7b5323840fa8923bc3fc008">lerFicheiroEscreverOutput</a></div><div class="ttdeci">int lerFicheiroEscreverOutput(const char *nome_ficheiro)</div><div class="ttdoc">Função para ler e escrever na consola o conteudo do ficheiro binário.</div><div class="ttdef"><b>Definição</b> func.c:704</div></div>
+<div class="ttc" id="afunc_8h_html_a4773000c89be91dfd6caa662833abdde"><div class="ttname"><a href="func_8h.html#a4773000c89be91dfd6caa662833abdde">escreverIntersecoes</a></div><div class="ttdeci">int escreverIntersecoes(interlista *lista, FILE *f)</div><div class="ttdoc">Função para escrever interseçoes em um ficheiro bin.</div><div class="ttdef"><b>Definição</b> func.c:680</div></div>
+<div class="ttc" id="afunc_8h_html_a4dac090c5e5c58e32736beefe830b519"><div class="ttname"><a href="func_8h.html#a4dac090c5e5c58e32736beefe830b519">execDfs</a></div><div class="ttdeci">dfslista * execDfs(Grafo *grafo, int id_inicio)</div><div class="ttdoc">Função para executar o dfs através de um id de antena.</div><div class="ttdef"><b>Definição</b> func.c:215</div></div>
+<div class="ttc" id="afunc_8h_html_a5a65043d4728bccaddd601defc047a95"><div class="ttname"><a href="func_8h.html#a5a65043d4728bccaddd601defc047a95">desenfileirar</a></div><div class="ttdeci">Antena * desenfileirar(Fila *f)</div><div class="ttdoc">Função para remover a antena do inicio da lista.</div><div class="ttdef"><b>Definição</b> func.c:275</div></div>
+<div class="ttc" id="afunc_8h_html_a5b0cd757e77fca58262d007437bc9295"><div class="ttname"><a href="func_8h.html#a5b0cd757e77fca58262d007437bc9295">escreverCaminho</a></div><div class="ttdeci">int escreverCaminho(Caminho *caminho, FILE *f)</div><div class="ttdoc">Função para escrever caminhos em um ficheiro bin.</div><div class="ttdef"><b>Definição</b> func.c:662</div></div>
+<div class="ttc" id="afunc_8h_html_a5dcec61dfec0494a42a8c6b46cca7be2"><div class="ttname"><a href="func_8h.html#a5dcec61dfec0494a42a8c6b46cca7be2">escreverDFS</a></div><div class="ttdeci">int escreverDFS(dfslista *dfs, FILE *f)</div><div class="ttdoc">Função para escrever pontos encontrados pelo bfs em um ficheiro bin.</div><div class="ttdef"><b>Definição</b> func.c:622</div></div>
+<div class="ttc" id="afunc_8h_html_a78ed52f64438b0c11886e6d03f6d02e3"><div class="ttname"><a href="func_8h.html#a78ed52f64438b0c11886e6d03f6d02e3">removerDoCaminho</a></div><div class="ttdeci">int removerDoCaminho(Caminho *c)</div><div class="ttdoc">Função para remover uma antena (id) de um caminho.</div><div class="ttdef"><b>Definição</b> func.c:386</div></div>
+<div class="ttc" id="afunc_8h_html_a87e67b1b94c7f841255ed3db42fbbe08"><div class="ttname"><a href="func_8h.html#a87e67b1b94c7f841255ed3db42fbbe08">procurarAntenaId</a></div><div class="ttdeci">Antena * procurarAntenaId(Grafo *grafo, int id)</div><div class="ttdoc">Função para procurar uma antena no grafo pelo id.</div><div class="ttdef"><b>Definição</b> func.c:162</div></div>
+<div class="ttc" id="afunc_8h_html_a8d2f3b4c037e77fcdeeabb218a65cfa4"><div class="ttname"><a href="func_8h.html#a8d2f3b4c037e77fcdeeabb218a65cfa4">adicionarAoCamino</a></div><div class="ttdeci">int adicionarAoCamino(Caminho *c, int id_antena)</div><div class="ttdoc">Função para adicionar uma nova antena (id) a um caminho.</div><div class="ttdef"><b>Definição</b> func.c:369</div></div>
+<div class="ttc" id="afunc_8h_html_a9831908c5aced85e41cfd09f538c50a7"><div class="ttname"><a href="func_8h.html#a9831908c5aced85e41cfd09f538c50a7">execBfs</a></div><div class="ttdeci">bfslista * execBfs(Grafo *grafo, int id_inicio)</div><div class="ttdoc">Função para fazer pesquisa em largura (bfs) com id de uma antena.</div><div class="ttdef"><b>Definição</b> func.c:311</div></div>
+<div class="ttc" id="afunc_8h_html_aa552546be5db6e0f0ca3f66e7b939809"><div class="ttname"><a href="func_8h.html#aa552546be5db6e0f0ca3f66e7b939809">escreverBloco</a></div><div class="ttdeci">int escreverBloco(char *tag, FILE *f)</div><div class="ttdoc">Função para escrever um bloco em um ficheiro bin.</div><div class="ttdef"><b>Definição</b> func.c:585</div></div>
+<div class="ttc" id="afunc_8h_html_ab3eaf7a5e05eeece6d0f3cc5a04b2cd4"><div class="ttname"><a href="func_8h.html#ab3eaf7a5e05eeece6d0f3cc5a04b2cd4">inicializarFila</a></div><div class="ttdeci">int inicializarFila(Fila *f)</div><div class="ttdoc">Função para inicializar a estrutura de uma fila vazia.</div><div class="ttdef"><b>Definição</b> func.c:238</div></div>
+<div class="ttc" id="afunc_8h_html_ade7b9a12324f4d1425f2bb626d67b45f"><div class="ttname"><a href="func_8h.html#ade7b9a12324f4d1425f2bb626d67b45f">filaVazia</a></div><div class="ttdeci">int filaVazia(Fila *f)</div><div class="ttdoc">verifica se a fila está vazia</div><div class="ttdef"><b>Definição</b> func.c:299</div></div>
+<div class="ttc" id="afunc_8h_html_ae022e6ecdc705a0dfec30f6e3781a00c"><div class="ttname"><a href="func_8h.html#ae022e6ecdc705a0dfec30f6e3781a00c">encontrarCaminhoDFS</a></div><div class="ttdeci">int encontrarCaminhoDFS(Grafo *grafo, int id_origem, int id_destino, Caminho *caminho)</div><div class="ttdoc">Função principal para procurar caminhos entre 2 antenas no grafo.</div><div class="ttdef"><b>Definição</b> func.c:443</div></div>
+<div class="ttc" id="afunc_8h_html_ae524736eaa80d9a4afde36cf810118fc"><div class="ttname"><a href="func_8h.html#ae524736eaa80d9a4afde36cf810118fc">detetarIntersecoes</a></div><div class="ttdeci">interlista * detetarIntersecoes(Grafo *grafo)</div><div class="ttdoc">Função para detetar interseções em um grafo.</div><div class="ttdef"><b>Definição</b> func.c:514</div></div>
+<div class="ttc" id="afunc_8h_html_aeca7edf7cb33c72e3f1ab8ca020f8322"><div class="ttname"><a href="func_8h.html#aeca7edf7cb33c72e3f1ab8ca020f8322">dfs</a></div><div class="ttdeci">dfslista * dfs(Antena *atual, dfslista *lista)</div><div class="ttdoc">Função para fazer pesquisa em profundidade (DFS)</div><div class="ttdef"><b>Definição</b> func.c:185</div></div>
+<div class="ttc" id="afunc_8h_html_aedd35d53fa2884e1d8cfda43174caf62"><div class="ttname"><a href="func_8h.html#aedd35d53fa2884e1d8cfda43174caf62">escreverBFS</a></div><div class="ttdeci">int escreverBFS(bfslista *bfs, FILE *f)</div><div class="ttdoc">Função para escrever pontos encontrados pelo bfs em um ficheiro bin.</div><div class="ttdef"><b>Definição</b> func.c:642</div></div>
+<div class="ttc" id="afunc_8h_html_af5cf618621b693d94215a263da3ba5ff"><div class="ttname"><a href="func_8h.html#af5cf618621b693d94215a263da3ba5ff">criarGrafo</a></div><div class="ttdeci">Grafo * criarGrafo()</div><div class="ttdoc">Função para criar e inicializar um grafo.</div><div class="ttdef"><b>Definição</b> func.c:24</div></div>
+<div class="ttc" id="afunc_8h_html_afab4ca45113000241a5a0b41a2baf135"><div class="ttname"><a href="func_8h.html#afab4ca45113000241a5a0b41a2baf135">carregarAntenas</a></div><div class="ttdeci">Grafo * carregarAntenas(const char *ficheiro)</div><div class="ttdoc">Função principal de carregamento de antenas.</div><div class="ttdef"><b>Definição</b> func.c:94</div></div>
+<div class="ttc" id="afunc_8h_html_afeb3d33e33f650a92f0f28bf83b17514"><div class="ttname"><a href="func_8h.html#afeb3d33e33f650a92f0f28bf83b17514">escreverAntenas</a></div><div class="ttdeci">int escreverAntenas(Grafo *grafo, FILE *f)</div><div class="ttdoc">Função para escrever antenas e os seus dados em um ficheiro bin.</div><div class="ttdef"><b>Definição</b> func.c:598</div></div>
+<div class="ttc" id="afunc_8h_html_affe2c24d6e71d09ed33ff424960d8a8c"><div class="ttname"><a href="func_8h.html#affe2c24d6e71d09ed33ff424960d8a8c">dfsBacktracking</a></div><div class="ttdeci">int dfsBacktracking(Antena *atual, Antena *destino, Caminho *caminho)</div><div class="ttdoc">Função dfs para procurar caminhos.</div><div class="ttdef"><b>Definição</b> func.c:407</div></div>
+<div class="ttc" id="astruct_antena_html"><div class="ttname"><a href="struct_antena.html">Antena</a></div><div class="ttdoc">Estrutura de uma antena (vértice)</div><div class="ttdef"><b>Definição</b> estruturas.h:18</div></div>
+<div class="ttc" id="astruct_caminho_html"><div class="ttname"><a href="struct_caminho.html">Caminho</a></div><div class="ttdoc">Estrutura de um caminho (lista ligada)</div><div class="ttdef"><b>Definição</b> estruturas.h:82</div></div>
+<div class="ttc" id="astruct_fila_html"><div class="ttname"><a href="struct_fila.html">Fila</a></div><div class="ttdoc">Estrutura de uma Fila (lista dinámica para bfs)</div><div class="ttdef"><b>Definição</b> estruturas.h:72</div></div>
+<div class="ttc" id="astruct_grafo_html"><div class="ttname"><a href="struct_grafo.html">Grafo</a></div><div class="ttdoc">Estrutura do Gráfo.</div><div class="ttdef"><b>Definição</b> estruturas.h:42</div></div>
+<div class="ttc" id="astructbfslista_html"><div class="ttname"><a href="structbfslista.html">bfslista</a></div><div class="ttdoc">Estrutura de uma lista de resultados da pesquisa em largura (bfs)</div><div class="ttdef"><b>Definição</b> estruturas.h:62</div></div>
+<div class="ttc" id="astructdfslista_html"><div class="ttname"><a href="structdfslista.html">dfslista</a></div><div class="ttdoc">Estrutura de uma lista de resultados da pesquisa em profundidade (dfs)</div><div class="ttdef"><b>Definição</b> estruturas.h:52</div></div>
+<div class="ttc" id="astructinterlista_html"><div class="ttname"><a href="structinterlista.html">interlista</a></div><div class="ttdoc">Estrutura de uma lista de resultados de interseção.</div><div class="ttdef"><b>Definição</b> estruturas.h:102</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="func_8h.html">func.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

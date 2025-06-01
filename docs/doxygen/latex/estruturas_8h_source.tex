@@ -1,0 +1,81 @@
+\doxysection{estruturas.\+h}
+\hypertarget{estruturas_8h_source}{}\label{estruturas_8h_source}\index{include/estruturas.h@{include/estruturas.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ ESTRUTURAS\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ ESTRUTURAS\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_antena}{Antena}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ coordenadas\ da\ antena}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{char}\ freq;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ frequência}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ visitado;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ inteiro\ para\ verificar\ se\ foi\ visitado}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ id;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ id}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_aresta}{Aresta}}\ *adj;\ \ \textcolor{comment}{//\ lista\ de\ adjacência\ (arestas)}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_antena}{Antena}}\ *next;\ \textcolor{comment}{//\ pointer\ prox\ antena}}
+\DoxyCodeLine{00025\ \}\ \mbox{\hyperlink{struct_antena}{Antena}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_aresta}{Aresta}}}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_antena}{Antena}}\ *destino;\ \textcolor{comment}{//\ proxima\ antena}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_aresta}{Aresta}}\ *next;\ \ \ \ \textcolor{comment}{//\ pointer\ prox\ aresta}}
+\DoxyCodeLine{00035\ \}\ \mbox{\hyperlink{struct_aresta}{Aresta}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_grafo}{Grafo}}}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ V;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ número\ de\ vértices}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_antena}{Antena}}\ *vertices;\ \textcolor{comment}{//\ \ \ \ pointer\ para\ a\ lista\ ligada\ de\ antenas\ (head)}}
+\DoxyCodeLine{00045\ \}\ \mbox{\hyperlink{struct_grafo}{Grafo}};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdfslista}{dfslista}}}
+\DoxyCodeLine{00052\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{struct_antena}{Antena}}\ *antena;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ antena}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdfslista}{dfslista}}\ *prox;\ \textcolor{comment}{//\ \ \ pointer\ prox\ antena}}
+\DoxyCodeLine{00055\ \}\ \mbox{\hyperlink{structdfslista}{dfslista}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structbfslista}{bfslista}}}
+\DoxyCodeLine{00062\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{struct_antena}{Antena}}\ *antena;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ antena}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structbfslista}{bfslista}}\ *prox;\ \textcolor{comment}{//\ \ \ pointer\ prox\ antena}}
+\DoxyCodeLine{00065\ \}\ \mbox{\hyperlink{structbfslista}{bfslista}};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_fila}{Fila}}}
+\DoxyCodeLine{00072\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{structbfslista}{bfslista}}\ *inicio;\ \textcolor{comment}{//\ inicio\ da\ fila}}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{structbfslista}{bfslista}}\ *fim;\ \ \ \ \textcolor{comment}{//\ fim\ da\ fila}}
+\DoxyCodeLine{00075\ \}\ \mbox{\hyperlink{struct_fila}{Fila}};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_caminho}{Caminho}}}
+\DoxyCodeLine{00082\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ tamanho;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ número\ de\ saltos\ em\ um\ caminho}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_no_caminho}{NoCaminho}}\ *head;\ \textcolor{comment}{//\ inicio\ da\ lista}}
+\DoxyCodeLine{00085\ \}\ \mbox{\hyperlink{struct_caminho}{Caminho}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_no_caminho}{NoCaminho}}}
+\DoxyCodeLine{00092\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ id\_antena;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ id\ da\ antena\ no\ nó\ do\ caminho}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_no_caminho}{NoCaminho}}\ *prox;\ \textcolor{comment}{//\ pointer\ para\ o\ prox}}
+\DoxyCodeLine{00095\ \}\ \mbox{\hyperlink{struct_no_caminho}{NoCaminho}};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structinterlista}{interlista}}}
+\DoxyCodeLine{00102\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{int}\ x1,\ y1,\ x2,\ y2;\ \ \ \ \ \ \textcolor{comment}{//\ \ \ coordenadas\ do\ primeiro\ segmento}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{int}\ x3,\ y3,\ x4,\ y4;\ \ \ \ \ \ \textcolor{comment}{//\ \ \ coordenadas\ do\ segundo\ segmento}}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{char}\ freq;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ frequencia\ das\ antenas}}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structinterlista}{interlista}}\ *prox;\ \textcolor{comment}{//\ pointer\ para\ o\ prox}}
+\DoxyCodeLine{00107\ \}\ \mbox{\hyperlink{structinterlista}{interlista}};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

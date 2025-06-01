@@ -1,0 +1,624 @@
+\doxysection{Referência ao ficheiro src/func.c}
+\hypertarget{func_8c}{}\label{func_8c}\index{src/func.c@{src/func.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include "{}../include/estruturas.\+h"{}}\newline
+{\ttfamily \#include "{}../include/func.\+h"{}}\newline
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{func_8c_af5cf618621b693d94215a263da3ba5ff}{criar\+Grafo}} ()
+\begin{DoxyCompactList}\small\item\em Função para criar e inicializar um grafo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{func_8c_a3171304a931b5928f13a133d127dd2f6}{criar\+Vertice}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}grafo, int x, int y, char freq)
+\begin{DoxyCompactList}\small\item\em Função para criar uma antena/vértice no grafo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_a1d7c3165c2b4b0e7d3c7a55bfd8e8122}{criar\+Aresta}} (\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}origem, \mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}destino)
+\begin{DoxyCompactList}\small\item\em Função para criar uma aresta para ligar duas antenas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{func_8c_afab4ca45113000241a5a0b41a2baf135}{carregar\+Antenas}} (const char \texorpdfstring{$\ast$}{*}ficheiro)
+\begin{DoxyCompactList}\small\item\em Função principal de carregamento de antenas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_a06fab3780d9fe80f2c09ec893fd5304a}{inserir\+Arestas}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}grafo)
+\begin{DoxyCompactList}\small\item\em Função para criar uma aresta de 2 antenas com a mesma função. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{func_8c_a87e67b1b94c7f841255ed3db42fbbe08}{procurar\+Antena\+Id}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}grafo, int id)
+\begin{DoxyCompactList}\small\item\em Função para procurar uma antena no grafo pelo id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structdfslista}{dfslista}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{func_8c_aeca7edf7cb33c72e3f1ab8ca020f8322}{dfs}} (\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}atual, \mbox{\hyperlink{structdfslista}{dfslista}} \texorpdfstring{$\ast$}{*}lista)
+\begin{DoxyCompactList}\small\item\em Função para fazer pesquisa em profundidade (DFS) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structdfslista}{dfslista}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{func_8c_a4dac090c5e5c58e32736beefe830b519}{exec\+Dfs}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}grafo, int id\+\_\+inicio)
+\begin{DoxyCompactList}\small\item\em Função para executar o dfs através de um id de antena. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_ab3eaf7a5e05eeece6d0f3cc5a04b2cd4}{inicializar\+Fila}} (\mbox{\hyperlink{struct_fila}{Fila}} \texorpdfstring{$\ast$}{*}f)
+\begin{DoxyCompactList}\small\item\em Função para inicializar a estrutura de uma fila vazia. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_a1ac8b0a348e93616170763291da890d6}{enfileirar}} (\mbox{\hyperlink{struct_fila}{Fila}} \texorpdfstring{$\ast$}{*}f, \mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}a)
+\begin{DoxyCompactList}\small\item\em Função que insere uma antena no final da fila. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{func_8c_a5a65043d4728bccaddd601defc047a95}{desenfileirar}} (\mbox{\hyperlink{struct_fila}{Fila}} \texorpdfstring{$\ast$}{*}f)
+\begin{DoxyCompactList}\small\item\em Função para remover a antena do inicio da lista. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_ade7b9a12324f4d1425f2bb626d67b45f}{fila\+Vazia}} (\mbox{\hyperlink{struct_fila}{Fila}} \texorpdfstring{$\ast$}{*}f)
+\begin{DoxyCompactList}\small\item\em verifica se a fila está vazia \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structbfslista}{bfslista}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{func_8c_a9831908c5aced85e41cfd09f538c50a7}{exec\+Bfs}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}grafo, int id\+\_\+inicio)
+\begin{DoxyCompactList}\small\item\em Função para fazer pesquisa em largura (bfs) com id de uma antena. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_a8d2f3b4c037e77fcdeeabb218a65cfa4}{adicionar\+Ao\+Camino}} (\mbox{\hyperlink{struct_caminho}{Caminho}} \texorpdfstring{$\ast$}{*}c, int id\+\_\+antena)
+\begin{DoxyCompactList}\small\item\em Função para adicionar uma nova antena (id) a um caminho. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_a78ed52f64438b0c11886e6d03f6d02e3}{remover\+Do\+Caminho}} (\mbox{\hyperlink{struct_caminho}{Caminho}} \texorpdfstring{$\ast$}{*}c)
+\begin{DoxyCompactList}\small\item\em Função para remover uma antena (id) de um caminho. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_affe2c24d6e71d09ed33ff424960d8a8c}{dfs\+Backtracking}} (\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}atual, \mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}destino, \mbox{\hyperlink{struct_caminho}{Caminho}} \texorpdfstring{$\ast$}{*}caminho)
+\begin{DoxyCompactList}\small\item\em Função dfs para procurar caminhos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_ae022e6ecdc705a0dfec30f6e3781a00c}{encontrar\+Caminho\+DFS}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}grafo, int id\+\_\+origem, int id\+\_\+destino, \mbox{\hyperlink{struct_caminho}{Caminho}} \texorpdfstring{$\ast$}{*}caminho)
+\begin{DoxyCompactList}\small\item\em Função principal para procurar caminhos entre 2 antenas no grafo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_a28d12156f3d13a3339d9e6066fc0b866}{segmentos\+Se\+Cruzam}} (int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4)
+\begin{DoxyCompactList}\small\item\em Função para verificar se 2 segmentos se cruzam. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structinterlista}{interlista}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{func_8c_ae524736eaa80d9a4afde36cf810118fc}{detetar\+Intersecoes}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}grafo)
+\begin{DoxyCompactList}\small\item\em Função para detetar interseções em um grafo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_aa552546be5db6e0f0ca3f66e7b939809}{escrever\+Bloco}} (char \texorpdfstring{$\ast$}{*}tag, FILE \texorpdfstring{$\ast$}{*}f)
+\begin{DoxyCompactList}\small\item\em Função para escrever um bloco em um ficheiro bin. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_afeb3d33e33f650a92f0f28bf83b17514}{escrever\+Antenas}} (\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}grafo, FILE \texorpdfstring{$\ast$}{*}f)
+\begin{DoxyCompactList}\small\item\em Função para escrever antenas e os seus dados em um ficheiro bin. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_a5dcec61dfec0494a42a8c6b46cca7be2}{escrever\+DFS}} (\mbox{\hyperlink{structdfslista}{dfslista}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{func_8c_aeca7edf7cb33c72e3f1ab8ca020f8322}{dfs}}, FILE \texorpdfstring{$\ast$}{*}f)
+\begin{DoxyCompactList}\small\item\em Função para escrever pontos encontrados pelo bfs em um ficheiro bin. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_aedd35d53fa2884e1d8cfda43174caf62}{escrever\+BFS}} (\mbox{\hyperlink{structbfslista}{bfslista}} \texorpdfstring{$\ast$}{*}bfs, FILE \texorpdfstring{$\ast$}{*}f)
+\begin{DoxyCompactList}\small\item\em Função para escrever pontos encontrados pelo bfs em um ficheiro bin. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_a5b0cd757e77fca58262d007437bc9295}{escrever\+Caminho}} (\mbox{\hyperlink{struct_caminho}{Caminho}} \texorpdfstring{$\ast$}{*}caminho, FILE \texorpdfstring{$\ast$}{*}f)
+\begin{DoxyCompactList}\small\item\em Função para escrever caminhos em um ficheiro bin. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_a4773000c89be91dfd6caa662833abdde}{escrever\+Intersecoes}} (\mbox{\hyperlink{structinterlista}{interlista}} \texorpdfstring{$\ast$}{*}lista, FILE \texorpdfstring{$\ast$}{*}f)
+\begin{DoxyCompactList}\small\item\em Função para escrever interseçoes em um ficheiro bin. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_a3d1f28c5d7b5323840fa8923bc3fc008}{ler\+Ficheiro\+Escrever\+Output}} (const char \texorpdfstring{$\ast$}{*}nome\+\_\+ficheiro)
+\begin{DoxyCompactList}\small\item\em Função para ler e escrever na consola o conteudo do ficheiro binário. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{func_8c_a29463bd2db52cabfe2390f0f64a14115}{free\+Mem}} (\mbox{\hyperlink{structdfslista}{dfslista}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{func_8c_aeca7edf7cb33c72e3f1ab8ca020f8322}{dfs}}, \mbox{\hyperlink{structbfslista}{bfslista}} \texorpdfstring{$\ast$}{*}bfs, \mbox{\hyperlink{structinterlista}{interlista}} \texorpdfstring{$\ast$}{*}ints)
+\begin{DoxyCompactList}\small\item\em Função para libertar memória. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+\begin{DoxyAuthor}{Autor}
+Bruno (\href{mailto:a31496@alunos.ipca.pt}{\texttt{ a31496@alunos.\+ipca.\+pt}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+1.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2025-\/05-\/18 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{func_8c_a8d2f3b4c037e77fcdeeabb218a65cfa4}\index{func.c@{func.c}!adicionarAoCamino@{adicionarAoCamino}}
+\index{adicionarAoCamino@{adicionarAoCamino}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{adicionarAoCamino()}{adicionarAoCamino()}}
+{\footnotesize\ttfamily \label{func_8c_a8d2f3b4c037e77fcdeeabb218a65cfa4} 
+int adicionar\+Ao\+Camino (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_caminho}{Caminho}} \texorpdfstring{$\ast$}{*}}]{c}{, }\item[{int}]{id\+\_\+antena}{}\end{DoxyParamCaption})}
+
+
+
+Função para adicionar uma nova antena (id) a um caminho. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em c} & caminho \\
+\hline
+{\em id\+\_\+antena} & id da antena \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = sucesso 
+\end{DoxyReturn}
+\Hypertarget{func_8c_afab4ca45113000241a5a0b41a2baf135}\index{func.c@{func.c}!carregarAntenas@{carregarAntenas}}
+\index{carregarAntenas@{carregarAntenas}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{carregarAntenas()}{carregarAntenas()}}
+{\footnotesize\ttfamily \label{func_8c_afab4ca45113000241a5a0b41a2baf135} 
+\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*} carregar\+Antenas (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{ficheiro}{}\end{DoxyParamCaption})}
+
+
+
+Função principal de carregamento de antenas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ficheiro} & nome do ficheiro txt com antenas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+grafo com antenas inseridas 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a1d7c3165c2b4b0e7d3c7a55bfd8e8122}\index{func.c@{func.c}!criarAresta@{criarAresta}}
+\index{criarAresta@{criarAresta}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{criarAresta()}{criarAresta()}}
+{\footnotesize\ttfamily \label{func_8c_a1d7c3165c2b4b0e7d3c7a55bfd8e8122} 
+int criar\+Aresta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{origem}{, }\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{destino}{}\end{DoxyParamCaption})}
+
+
+
+Função para criar uma aresta para ligar duas antenas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em origem} & antena de origem \\
+\hline
+{\em destino} & antena de destino \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = sucesso 
+\end{DoxyReturn}
+\Hypertarget{func_8c_af5cf618621b693d94215a263da3ba5ff}\index{func.c@{func.c}!criarGrafo@{criarGrafo}}
+\index{criarGrafo@{criarGrafo}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{criarGrafo()}{criarGrafo()}}
+{\footnotesize\ttfamily \label{func_8c_af5cf618621b693d94215a263da3ba5ff} 
+\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*} criar\+Grafo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Função para criar e inicializar um grafo. 
+
+\begin{DoxyReturn}{Retorna}
+grafo criado 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a3171304a931b5928f13a133d127dd2f6}\index{func.c@{func.c}!criarVertice@{criarVertice}}
+\index{criarVertice@{criarVertice}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{criarVertice()}{criarVertice()}}
+{\footnotesize\ttfamily \label{func_8c_a3171304a931b5928f13a133d127dd2f6} 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} criar\+Vertice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{grafo}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{char}]{freq}{}\end{DoxyParamCaption})}
+
+
+
+Função para criar uma antena/vértice no grafo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em grafo} & grafo para inserir as antena \\
+\hline
+{\em x} & coordenada x da antena \\
+\hline
+{\em y} & coordenada y da antena \\
+\hline
+{\em freq} & frequência da antena \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+pointer para a antena criada 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a5a65043d4728bccaddd601defc047a95}\index{func.c@{func.c}!desenfileirar@{desenfileirar}}
+\index{desenfileirar@{desenfileirar}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{desenfileirar()}{desenfileirar()}}
+{\footnotesize\ttfamily \label{func_8c_a5a65043d4728bccaddd601defc047a95} 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} desenfileirar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_fila}{Fila}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+
+
+Função para remover a antena do inicio da lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em f} & fila \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+antena do inicio da lista 
+\end{DoxyReturn}
+\Hypertarget{func_8c_ae524736eaa80d9a4afde36cf810118fc}\index{func.c@{func.c}!detetarIntersecoes@{detetarIntersecoes}}
+\index{detetarIntersecoes@{detetarIntersecoes}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{detetarIntersecoes()}{detetarIntersecoes()}}
+{\footnotesize\ttfamily \label{func_8c_ae524736eaa80d9a4afde36cf810118fc} 
+\mbox{\hyperlink{structinterlista}{interlista}} \texorpdfstring{$\ast$}{*} detetar\+Intersecoes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{grafo}{}\end{DoxyParamCaption})}
+
+
+
+Função para detetar interseções em um grafo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em grafo} & grafo com as antenas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Lista com os pontos que se intersetam 
+\end{DoxyReturn}
+\Hypertarget{func_8c_aeca7edf7cb33c72e3f1ab8ca020f8322}\index{func.c@{func.c}!dfs@{dfs}}
+\index{dfs@{dfs}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{dfs()}{dfs()}}
+{\footnotesize\ttfamily \label{func_8c_aeca7edf7cb33c72e3f1ab8ca020f8322} 
+\mbox{\hyperlink{structdfslista}{dfslista}} \texorpdfstring{$\ast$}{*} dfs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{atual}{, }\item[{\mbox{\hyperlink{structdfslista}{dfslista}} \texorpdfstring{$\ast$}{*}}]{lista}{}\end{DoxyParamCaption})}
+
+
+
+Função para fazer pesquisa em profundidade (DFS) 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em atual} & antena atual \\
+\hline
+{\em lista} & lista de antenas já visitadas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+lista com todas as antenas alcançadas pelo dfs 
+\end{DoxyReturn}
+\Hypertarget{func_8c_affe2c24d6e71d09ed33ff424960d8a8c}\index{func.c@{func.c}!dfsBacktracking@{dfsBacktracking}}
+\index{dfsBacktracking@{dfsBacktracking}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{dfsBacktracking()}{dfsBacktracking()}}
+{\footnotesize\ttfamily \label{func_8c_affe2c24d6e71d09ed33ff424960d8a8c} 
+int dfs\+Backtracking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{atual}{, }\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{destino}{, }\item[{\mbox{\hyperlink{struct_caminho}{Caminho}} \texorpdfstring{$\ast$}{*}}]{caminho}{}\end{DoxyParamCaption})}
+
+
+
+Função dfs para procurar caminhos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em atual} & antena atual \\
+\hline
+{\em destino} & antena destino \\
+\hline
+{\em caminho} & lista do caminho \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = caminho encontrado, 0 caso contrario 
+\end{DoxyReturn}
+\Hypertarget{func_8c_ae022e6ecdc705a0dfec30f6e3781a00c}\index{func.c@{func.c}!encontrarCaminhoDFS@{encontrarCaminhoDFS}}
+\index{encontrarCaminhoDFS@{encontrarCaminhoDFS}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{encontrarCaminhoDFS()}{encontrarCaminhoDFS()}}
+{\footnotesize\ttfamily \label{func_8c_ae022e6ecdc705a0dfec30f6e3781a00c} 
+int encontrar\+Caminho\+DFS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{grafo}{, }\item[{int}]{id\+\_\+origem}{, }\item[{int}]{id\+\_\+destino}{, }\item[{\mbox{\hyperlink{struct_caminho}{Caminho}} \texorpdfstring{$\ast$}{*}}]{caminho}{}\end{DoxyParamCaption})}
+
+
+
+Função principal para procurar caminhos entre 2 antenas no grafo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em grafo} & grafo com antenas \\
+\hline
+{\em id\+\_\+origem} & id da antena de origem \\
+\hline
+{\em id\+\_\+destino} & id da antena de origem \\
+\hline
+{\em caminho} & lista do caminho \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = caminho encontrado, 0 caso contrario 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a1ac8b0a348e93616170763291da890d6}\index{func.c@{func.c}!enfileirar@{enfileirar}}
+\index{enfileirar@{enfileirar}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{enfileirar()}{enfileirar()}}
+{\footnotesize\ttfamily \label{func_8c_a1ac8b0a348e93616170763291da890d6} 
+int enfileirar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_fila}{Fila}} \texorpdfstring{$\ast$}{*}}]{f}{, }\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})}
+
+
+
+Função que insere uma antena no final da fila. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em f} & fila \\
+\hline
+{\em a} & antena que será inserida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = sucesso 
+\end{DoxyReturn}
+\Hypertarget{func_8c_afeb3d33e33f650a92f0f28bf83b17514}\index{func.c@{func.c}!escreverAntenas@{escreverAntenas}}
+\index{escreverAntenas@{escreverAntenas}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{escreverAntenas()}{escreverAntenas()}}
+{\footnotesize\ttfamily \label{func_8c_afeb3d33e33f650a92f0f28bf83b17514} 
+int escrever\+Antenas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{grafo}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+
+
+Função para escrever antenas e os seus dados em um ficheiro bin. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em grafo} & grafo com antenas \\
+\hline
+{\em f} & ficheiro binário aberto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = sucesso 
+\end{DoxyReturn}
+\Hypertarget{func_8c_aedd35d53fa2884e1d8cfda43174caf62}\index{func.c@{func.c}!escreverBFS@{escreverBFS}}
+\index{escreverBFS@{escreverBFS}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{escreverBFS()}{escreverBFS()}}
+{\footnotesize\ttfamily \label{func_8c_aedd35d53fa2884e1d8cfda43174caf62} 
+int escrever\+BFS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbfslista}{bfslista}} \texorpdfstring{$\ast$}{*}}]{bfs}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+
+
+Função para escrever pontos encontrados pelo bfs em um ficheiro bin. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em bfs} & lista de pontos encontrados pelo bfs \\
+\hline
+{\em f} & ficheiro binário aberto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = sucesso 
+\end{DoxyReturn}
+\Hypertarget{func_8c_aa552546be5db6e0f0ca3f66e7b939809}\index{func.c@{func.c}!escreverBloco@{escreverBloco}}
+\index{escreverBloco@{escreverBloco}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{escreverBloco()}{escreverBloco()}}
+{\footnotesize\ttfamily \label{func_8c_aa552546be5db6e0f0ca3f66e7b939809} 
+int escrever\+Bloco (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{tag}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+
+
+Função para escrever um bloco em um ficheiro bin. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tag} & tag de 3 caracteres para identificar os dados exmpl "{}\+ANT"{} -\/ antenas \\
+\hline
+{\em f} & ficheiro binário aberto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = sucesso 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a5b0cd757e77fca58262d007437bc9295}\index{func.c@{func.c}!escreverCaminho@{escreverCaminho}}
+\index{escreverCaminho@{escreverCaminho}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{escreverCaminho()}{escreverCaminho()}}
+{\footnotesize\ttfamily \label{func_8c_a5b0cd757e77fca58262d007437bc9295} 
+int escrever\+Caminho (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_caminho}{Caminho}} \texorpdfstring{$\ast$}{*}}]{caminho}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+
+
+Função para escrever caminhos em um ficheiro bin. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em caminho} & lista de caminho \\
+\hline
+{\em f} & ficheiro binário aberto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = sucesso 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a5dcec61dfec0494a42a8c6b46cca7be2}\index{func.c@{func.c}!escreverDFS@{escreverDFS}}
+\index{escreverDFS@{escreverDFS}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{escreverDFS()}{escreverDFS()}}
+{\footnotesize\ttfamily \label{func_8c_a5dcec61dfec0494a42a8c6b46cca7be2} 
+int escrever\+DFS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdfslista}{dfslista}} \texorpdfstring{$\ast$}{*}}]{dfs}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+
+
+Função para escrever pontos encontrados pelo bfs em um ficheiro bin. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em dfs} & lista de pontos encontrados pelo dfs \\
+\hline
+{\em f} & ficheiro binário aberto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = sucesso 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a4773000c89be91dfd6caa662833abdde}\index{func.c@{func.c}!escreverIntersecoes@{escreverIntersecoes}}
+\index{escreverIntersecoes@{escreverIntersecoes}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{escreverIntersecoes()}{escreverIntersecoes()}}
+{\footnotesize\ttfamily \label{func_8c_a4773000c89be91dfd6caa662833abdde} 
+int escrever\+Intersecoes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structinterlista}{interlista}} \texorpdfstring{$\ast$}{*}}]{lista}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+
+
+Função para escrever interseçoes em um ficheiro bin. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista} & lista de inter \\
+\hline
+{\em f} & ficheiro binário aberto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = sucesso 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a9831908c5aced85e41cfd09f538c50a7}\index{func.c@{func.c}!execBfs@{execBfs}}
+\index{execBfs@{execBfs}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{execBfs()}{execBfs()}}
+{\footnotesize\ttfamily \label{func_8c_a9831908c5aced85e41cfd09f538c50a7} 
+\mbox{\hyperlink{structbfslista}{bfslista}} \texorpdfstring{$\ast$}{*} exec\+Bfs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{grafo}{, }\item[{int}]{id\+\_\+inicio}{}\end{DoxyParamCaption})}
+
+
+
+Função para fazer pesquisa em largura (bfs) com id de uma antena. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em grafo} & grafo com as antenas \\
+\hline
+{\em id\+\_\+inicio} & id da antena inicial \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+lista com as antenas visitadas pelo bfs 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a4dac090c5e5c58e32736beefe830b519}\index{func.c@{func.c}!execDfs@{execDfs}}
+\index{execDfs@{execDfs}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{execDfs()}{execDfs()}}
+{\footnotesize\ttfamily \label{func_8c_a4dac090c5e5c58e32736beefe830b519} 
+\mbox{\hyperlink{structdfslista}{dfslista}} \texorpdfstring{$\ast$}{*} exec\+Dfs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{grafo}{, }\item[{int}]{id\+\_\+inicio}{}\end{DoxyParamCaption})}
+
+
+
+Função para executar o dfs através de um id de antena. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em grafo} & grafo com antenas \\
+\hline
+{\em id\+\_\+inicio} & id da antena que começa a pesquisa \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+lista com todos os pontos alcançados pelo dfs 
+\end{DoxyReturn}
+\Hypertarget{func_8c_ade7b9a12324f4d1425f2bb626d67b45f}\index{func.c@{func.c}!filaVazia@{filaVazia}}
+\index{filaVazia@{filaVazia}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{filaVazia()}{filaVazia()}}
+{\footnotesize\ttfamily \label{func_8c_ade7b9a12324f4d1425f2bb626d67b45f} 
+int fila\+Vazia (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_fila}{Fila}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+
+
+verifica se a fila está vazia 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em f} & fila \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 se está vazia, caso contrario 0 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a29463bd2db52cabfe2390f0f64a14115}\index{func.c@{func.c}!freeMem@{freeMem}}
+\index{freeMem@{freeMem}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{freeMem()}{freeMem()}}
+{\footnotesize\ttfamily \label{func_8c_a29463bd2db52cabfe2390f0f64a14115} 
+int free\+Mem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdfslista}{dfslista}} \texorpdfstring{$\ast$}{*}}]{dfs}{, }\item[{\mbox{\hyperlink{structbfslista}{bfslista}} \texorpdfstring{$\ast$}{*}}]{bfs}{, }\item[{\mbox{\hyperlink{structinterlista}{interlista}} \texorpdfstring{$\ast$}{*}}]{ints}{}\end{DoxyParamCaption})}
+
+
+
+Função para libertar memória. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em dfs} & lista de dfs \\
+\hline
+{\em bfs} & lista de dfs \\
+\hline
+{\em ints} & lista de interseções \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = sucesso 
+\end{DoxyReturn}
+\Hypertarget{func_8c_ab3eaf7a5e05eeece6d0f3cc5a04b2cd4}\index{func.c@{func.c}!inicializarFila@{inicializarFila}}
+\index{inicializarFila@{inicializarFila}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{inicializarFila()}{inicializarFila()}}
+{\footnotesize\ttfamily \label{func_8c_ab3eaf7a5e05eeece6d0f3cc5a04b2cd4} 
+int inicializar\+Fila (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_fila}{Fila}} \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+
+
+Função para inicializar a estrutura de uma fila vazia. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em f} & fila que será inicializada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = sucesso 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a06fab3780d9fe80f2c09ec893fd5304a}\index{func.c@{func.c}!inserirArestas@{inserirArestas}}
+\index{inserirArestas@{inserirArestas}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{inserirArestas()}{inserirArestas()}}
+{\footnotesize\ttfamily \label{func_8c_a06fab3780d9fe80f2c09ec893fd5304a} 
+int inserir\+Arestas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{grafo}{}\end{DoxyParamCaption})}
+
+
+
+Função para criar uma aresta de 2 antenas com a mesma função. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em grafo} & grafo com antenas inseridas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = sucesso 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a3d1f28c5d7b5323840fa8923bc3fc008}\index{func.c@{func.c}!lerFicheiroEscreverOutput@{lerFicheiroEscreverOutput}}
+\index{lerFicheiroEscreverOutput@{lerFicheiroEscreverOutput}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{lerFicheiroEscreverOutput()}{lerFicheiroEscreverOutput()}}
+{\footnotesize\ttfamily \label{func_8c_a3d1f28c5d7b5323840fa8923bc3fc008} 
+int ler\+Ficheiro\+Escrever\+Output (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{nome\+\_\+ficheiro}{}\end{DoxyParamCaption})}
+
+
+
+Função para ler e escrever na consola o conteudo do ficheiro binário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+\_\+ficheiro} & nome do ficheiro binário \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = sucesso 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a87e67b1b94c7f841255ed3db42fbbe08}\index{func.c@{func.c}!procurarAntenaId@{procurarAntenaId}}
+\index{procurarAntenaId@{procurarAntenaId}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{procurarAntenaId()}{procurarAntenaId()}}
+{\footnotesize\ttfamily \label{func_8c_a87e67b1b94c7f841255ed3db42fbbe08} 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} procurar\+Antena\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_grafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{grafo}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Função para procurar uma antena no grafo pelo id. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em grafo} & grafo com as antenas \\
+\hline
+{\em id} & id da antena \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+antena pedida 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a78ed52f64438b0c11886e6d03f6d02e3}\index{func.c@{func.c}!removerDoCaminho@{removerDoCaminho}}
+\index{removerDoCaminho@{removerDoCaminho}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{removerDoCaminho()}{removerDoCaminho()}}
+{\footnotesize\ttfamily \label{func_8c_a78ed52f64438b0c11886e6d03f6d02e3} 
+int remover\+Do\+Caminho (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_caminho}{Caminho}} \texorpdfstring{$\ast$}{*}}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Função para remover uma antena (id) de um caminho. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em c} & caminho \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 = sucesso 
+\end{DoxyReturn}
+\Hypertarget{func_8c_a28d12156f3d13a3339d9e6066fc0b866}\index{func.c@{func.c}!segmentosSeCruzam@{segmentosSeCruzam}}
+\index{segmentosSeCruzam@{segmentosSeCruzam}!func.c@{func.c}}
+\doxysubsubsection{\texorpdfstring{segmentosSeCruzam()}{segmentosSeCruzam()}}
+{\footnotesize\ttfamily \label{func_8c_a28d12156f3d13a3339d9e6066fc0b866} 
+int segmentos\+Se\+Cruzam (\begin{DoxyParamCaption}\item[{int}]{x1}{, }\item[{int}]{y1}{, }\item[{int}]{x2}{, }\item[{int}]{y2}{, }\item[{int}]{x3}{, }\item[{int}]{y3}{, }\item[{int}]{x4}{, }\item[{int}]{y4}{}\end{DoxyParamCaption})}
+
+
+
+Função para verificar se 2 segmentos se cruzam. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em x1} & coordenada x do primeiro ponto \\
+\hline
+{\em y1} & coordenada y do primeiro ponto \\
+\hline
+{\em x2} & coordenada x do segundo ponto \\
+\hline
+{\em y2} & coordenada y do segundo ponto \\
+\hline
+{\em x3} & coordenada x do terceiro ponto \\
+\hline
+{\em y3} & coordenada y do terceiro ponto \\
+\hline
+{\em x4} & coordenada x do quarto ponto \\
+\hline
+{\em y4} & coordenada y do quarto ponto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 se os segmentos (x1,y1)-\/(x2,y2) e (x3,y3)-\/(x4,y4) se cruzam, 0 caso contrário 
+\end{DoxyReturn}

@@ -1,0 +1,189 @@
+\begin{theindex}
+
+  \item {adicionarAoCamino}
+    \subitem {func.c}, \hyperpage{25}
+    \subitem {func.h}, \hyperpage{13}
+  \item {Antena}, \hyperpage{5}
+  \item {Aresta}, \hyperpage{5}
+
+  \indexspace
+
+  \item {bfslista}, \hyperpage{6}
+
+  \indexspace
+
+  \item {Caminho}, \hyperpage{6}
+  \item {carregarAntenas}
+    \subitem {func.c}, \hyperpage{25}
+    \subitem {func.h}, \hyperpage{14}
+  \item {criarAresta}
+    \subitem {func.c}, \hyperpage{25}
+    \subitem {func.h}, \hyperpage{14}
+  \item {criarGrafo}
+    \subitem {func.c}, \hyperpage{25}
+    \subitem {func.h}, \hyperpage{14}
+  \item {criarVertice}
+    \subitem {func.c}, \hyperpage{26}
+    \subitem {func.h}, \hyperpage{14}
+
+  \indexspace
+
+  \item {desenfileirar}
+    \subitem {func.c}, \hyperpage{26}
+    \subitem {func.h}, \hyperpage{15}
+  \item {detetarIntersecoes}
+    \subitem {func.c}, \hyperpage{26}
+    \subitem {func.h}, \hyperpage{15}
+  \item {dfs}
+    \subitem {func.c}, \hyperpage{27}
+    \subitem {func.h}, \hyperpage{15}
+  \item {dfsBacktracking}
+    \subitem {func.c}, \hyperpage{27}
+    \subitem {func.h}, \hyperpage{16}
+  \item {dfslista}, \hyperpage{7}
+
+  \indexspace
+
+  \item {encontrarCaminhoDFS}
+    \subitem {func.c}, \hyperpage{27}
+    \subitem {func.h}, \hyperpage{16}
+  \item {enfileirar}
+    \subitem {func.c}, \hyperpage{28}
+    \subitem {func.h}, \hyperpage{16}
+  \item {escreverAntenas}
+    \subitem {func.c}, \hyperpage{28}
+    \subitem {func.h}, \hyperpage{17}
+  \item {escreverBFS}
+    \subitem {func.c}, \hyperpage{28}
+    \subitem {func.h}, \hyperpage{17}
+  \item {escreverBloco}
+    \subitem {func.c}, \hyperpage{29}
+    \subitem {func.h}, \hyperpage{17}
+  \item {escreverCaminho}
+    \subitem {func.c}, \hyperpage{29}
+    \subitem {func.h}, \hyperpage{18}
+  \item {escreverDFS}
+    \subitem {func.c}, \hyperpage{29}
+    \subitem {func.h}, \hyperpage{18}
+  \item {escreverIntersecoes}
+    \subitem {func.c}, \hyperpage{30}
+    \subitem {func.h}, \hyperpage{18}
+  \item {execBfs}
+    \subitem {func.c}, \hyperpage{30}
+    \subitem {func.h}, \hyperpage{19}
+  \item {execDfs}
+    \subitem {func.c}, \hyperpage{30}
+    \subitem {func.h}, \hyperpage{19}
+
+  \indexspace
+
+  \item {Fila}, \hyperpage{7}
+  \item {filaVazia}
+    \subitem {func.c}, \hyperpage{31}
+    \subitem {func.h}, \hyperpage{19}
+  \item {freeMem}
+    \subitem {func.c}, \hyperpage{31}
+    \subitem {func.h}, \hyperpage{20}
+  \item {func.c}
+    \subitem {adicionarAoCamino}, \hyperpage{25}
+    \subitem {carregarAntenas}, \hyperpage{25}
+    \subitem {criarAresta}, \hyperpage{25}
+    \subitem {criarGrafo}, \hyperpage{25}
+    \subitem {criarVertice}, \hyperpage{26}
+    \subitem {desenfileirar}, \hyperpage{26}
+    \subitem {detetarIntersecoes}, \hyperpage{26}
+    \subitem {dfs}, \hyperpage{27}
+    \subitem {dfsBacktracking}, \hyperpage{27}
+    \subitem {encontrarCaminhoDFS}, \hyperpage{27}
+    \subitem {enfileirar}, \hyperpage{28}
+    \subitem {escreverAntenas}, \hyperpage{28}
+    \subitem {escreverBFS}, \hyperpage{28}
+    \subitem {escreverBloco}, \hyperpage{29}
+    \subitem {escreverCaminho}, \hyperpage{29}
+    \subitem {escreverDFS}, \hyperpage{29}
+    \subitem {escreverIntersecoes}, \hyperpage{30}
+    \subitem {execBfs}, \hyperpage{30}
+    \subitem {execDfs}, \hyperpage{30}
+    \subitem {filaVazia}, \hyperpage{31}
+    \subitem {freeMem}, \hyperpage{31}
+    \subitem {inicializarFila}, \hyperpage{31}
+    \subitem {inserirArestas}, \hyperpage{32}
+    \subitem {lerFicheiroEscreverOutput}, \hyperpage{32}
+    \subitem {procurarAntenaId}, \hyperpage{32}
+    \subitem {removerDoCaminho}, \hyperpage{33}
+    \subitem {segmentosSeCruzam}, \hyperpage{33}
+  \item {func.h}
+    \subitem {adicionarAoCamino}, \hyperpage{13}
+    \subitem {carregarAntenas}, \hyperpage{14}
+    \subitem {criarAresta}, \hyperpage{14}
+    \subitem {criarGrafo}, \hyperpage{14}
+    \subitem {criarVertice}, \hyperpage{14}
+    \subitem {desenfileirar}, \hyperpage{15}
+    \subitem {detetarIntersecoes}, \hyperpage{15}
+    \subitem {dfs}, \hyperpage{15}
+    \subitem {dfsBacktracking}, \hyperpage{16}
+    \subitem {encontrarCaminhoDFS}, \hyperpage{16}
+    \subitem {enfileirar}, \hyperpage{16}
+    \subitem {escreverAntenas}, \hyperpage{17}
+    \subitem {escreverBFS}, \hyperpage{17}
+    \subitem {escreverBloco}, \hyperpage{17}
+    \subitem {escreverCaminho}, \hyperpage{18}
+    \subitem {escreverDFS}, \hyperpage{18}
+    \subitem {escreverIntersecoes}, \hyperpage{18}
+    \subitem {execBfs}, \hyperpage{19}
+    \subitem {execDfs}, \hyperpage{19}
+    \subitem {filaVazia}, \hyperpage{19}
+    \subitem {freeMem}, \hyperpage{20}
+    \subitem {inicializarFila}, \hyperpage{20}
+    \subitem {inserirArestas}, \hyperpage{20}
+    \subitem {lerFicheiroEscreverOutput}, \hyperpage{21}
+    \subitem {procurarAntenaId}, \hyperpage{21}
+    \subitem {removerDoCaminho}, \hyperpage{21}
+    \subitem {segmentosSeCruzam}, \hyperpage{22}
+
+  \indexspace
+
+  \item {Grafo}, \hyperpage{8}
+
+  \indexspace
+
+  \item {include/estruturas.h}, \hyperpage{11}
+  \item {include/func.h}, \hyperpage{12}, \hyperpage{22}
+  \item {inicializarFila}
+    \subitem {func.c}, \hyperpage{31}
+    \subitem {func.h}, \hyperpage{20}
+  \item {inserirArestas}
+    \subitem {func.c}, \hyperpage{32}
+    \subitem {func.h}, \hyperpage{20}
+  \item {interlista}, \hyperpage{8}
+
+  \indexspace
+
+  \item {lerFicheiroEscreverOutput}
+    \subitem {func.c}, \hyperpage{32}
+    \subitem {func.h}, \hyperpage{21}
+
+  \indexspace
+
+  \item {NoCaminho}, \hyperpage{9}
+
+  \indexspace
+
+  \item {procurarAntenaId}
+    \subitem {func.c}, \hyperpage{32}
+    \subitem {func.h}, \hyperpage{21}
+
+  \indexspace
+
+  \item {removerDoCaminho}
+    \subitem {func.c}, \hyperpage{33}
+    \subitem {func.h}, \hyperpage{21}
+
+  \indexspace
+
+  \item {segmentosSeCruzam}
+    \subitem {func.c}, \hyperpage{33}
+    \subitem {func.h}, \hyperpage{22}
+  \item {src/func.c}, \hyperpage{23}
+
+\end{theindex}
